@@ -82,7 +82,7 @@ pipeline {
                     credentialsId: "${NEXUS_LOGIN}",
                     artifacts: [
                         //artifact from workspace
-                        [artifactId: 'vproapp', classifier: '', file: 'target/vprofile-v2.war', type: 'war']
+                        [artifactId: 'vproapp1', classifier: '', file: 'target/vprofile-v2.war', type: 'war']
                     ]
                 )
             }
