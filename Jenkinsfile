@@ -91,8 +91,9 @@ pipeline {
                 )
             }
         }
+    }
 
-        post {
+    post {
             always {
                 echo 'Slack Notifications.'
                 slackSend channel: '#jenkinscicd', 
@@ -100,6 +101,5 @@ pipeline {
                 message: "Build Number: ${env.BUILD_NUMBER} \n Build Status: ${currentBuild.currentResult} \n Build URL: ${env.BUILD_URL} \n Build Logs: ${env.BUILD_URL}console"
             }
             
-        }
     }
 }
